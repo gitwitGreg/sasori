@@ -61,6 +61,7 @@ const headless = async() => {
                 if (error) {
                     console.log(error);
                 }
+                console.log('Saved most active file');
         });
 
         await page.click('.n4DWob');
@@ -92,6 +93,7 @@ const headless = async() => {
             if(error){
                 console.log('error saving file')
             }
+            console.log('gainers file saved')
         });
 
         await page.waitForSelector('.GqNdIe')
@@ -158,7 +160,7 @@ const headless = async() => {
             xlsx.set_fs(fs);
             xlsx.writeFile(wb, 'output.xlsx');
         }catch(error){
-            
+            console.log(error);
         }
 
         await browser.close();
